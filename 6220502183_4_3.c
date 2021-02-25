@@ -2,7 +2,7 @@
 
 int main()
 {
-    long int num,i,j,a=0;
+    int num,i,j,a;
 
     scanf("%d",&num);
 
@@ -16,19 +16,31 @@ int main()
     }
     else
     {
+        a=0;
         for ( i = 2; i < num; i++)
-        {
+        { 
+            a=0;
             if (num%i==0)
             {
                 for ( j = i; num>1;)
                 {
-                    num=num/j;
-                    printf("%d",num);
-                    a++;
+                    if (num%j==0)
+                    {
+                        num=num/j;
+                        a++;
+                    }
+                    else
+                    {
+                        break;
+                    }
                 }
             }
-            
+            else
+            {
+                continue;
+            }
+            printf("%d %d",i,a);
         }
-        //printf("%d %d",i-1,a);
+        
     }   
 }
