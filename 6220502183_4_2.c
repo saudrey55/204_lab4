@@ -10,11 +10,20 @@ int main()
 
     for ( i = 0; i < a; i++)
     {
-        for ( j = 0; j < 3; j++)
+        for ( j = 0; j < 2; j++)
         {
-            scanf("%d",b[i][j]);
+            scanf("%d",&b[i][j]);
         }
-        
     }
-    
+    for ( i = 0; i < a; i++)
+    {
+        for ( j = 0; j < 2; j++)
+        {
+            if (b[i][j]>1||b[i][j]<5)
+            {
+                
+            }
+            
+        }
+    }
 }
