@@ -41,7 +41,7 @@ int main()
     }
    if (e<=z&&e>0&&f<=x&&f>0)
    {
-      if (g==h)
+      if (g==h&&c>d)
       {
           printf("L");
       }
