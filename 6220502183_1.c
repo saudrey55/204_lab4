@@ -13,6 +13,10 @@ int main()
     f=b/10000;
     g=a%100;
     h=b%100;
+    if (c>12||d>12)
+    {
+        printf("W");
+    }
     
     if (c==1||c==3||c==5||c==7||c==8||c==10||c==12)
     {
@@ -39,15 +43,17 @@ int main()
     {
         x=29;
     }
-   if (e<z&&f<x&&g==h)
+   if (e<=z&&f<=x)
    {
-       printf("L");
+      if (g==h)
+      {
+          printf("L");
+      }
+      else
+      {
+          printf("B");
+      }
    }
-    else if (e<z&&f<x&&g!=h)
-   {
-       printf("B");
-   }
-    
    else
    {
        printf("W");
