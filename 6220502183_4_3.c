@@ -2,7 +2,7 @@
 
 int main()
 {
-    int num,i,a=0;
+    long int num,i,j,a=0;
 
     scanf("%d",&num);
 
@@ -20,16 +20,15 @@ int main()
         {
             if (num%i==0)
             {
-                for (size_t i = 0; i < count; i++)
+                for ( j = i; num>1;)
                 {
-                    /* code */
+                    num=num/j;
+                    printf("%d",num);
+                    a++;
                 }
-                
             }
             
         }
-    }
-    
-    
-    
+        //printf("%d %d",i-1,a);
+    }   
 }
