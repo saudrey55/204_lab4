@@ -41,11 +41,11 @@ int main()
     }
    if (e<=z&&e>0&&f<=x&&f>0)
    {
-      if (g==h||g>h&&c>d)
+      if (g==h&&c>d)
       {
           printf("L");
       }
-      else if(h>g&&c<d)
+      else
       {
           printf("B");
       }
