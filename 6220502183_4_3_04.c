@@ -6,7 +6,7 @@ int main()
     int i,z;
     char a[200];
 
-    scanf("%s",a);
+    scanf("%s",&a);
     z=strlen(a);
 
 
