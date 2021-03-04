@@ -11,6 +11,7 @@ int main()
     {
         for(i=0;i<n;i++)
         {
+            z[i]=0;
             scanf("%s",a);
             h=strlen(a);
             for(j=0;j<h;j++)
@@ -64,8 +65,13 @@ int main()
                 }
             }
             
-            printf("%d\n",sum);
+            z[i]+=sum;
 
         }
     }
+    for ( i = 0; i < n; i++)
+    {
+        printf("%d ",z[i]);
+    }
+    
 }
