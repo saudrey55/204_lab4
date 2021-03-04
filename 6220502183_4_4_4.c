@@ -1,61 +1,41 @@
 #include<stdio.h>
 #include<string.h>
 
+void Acronym(char *s);
+
 int nmain()
 {
     char z[1000];
-    int a,i;
 
     scanf("%[^\n]s",z);
-    a=strlen(z);
-
-    toupper(z);
-    printf("%s",z[0]);
-
-    for ( i = 1; i < a; i++)
-    {
-         if (z[i]!=" ")
-       {
-           if (z[i+1]==" ")
-           {
-               continue;
-           }
-       }
-       else if (z[i]==" ")
-       {
-           if (z[i+1]=='I'||z[i+1]=='A')
-           {
-               continue;
-           }
-           else if (z[i+1]=='o'||z[i+1]=='a'||z[i=1]=='i')
-           {
-               if (z[i+2]=='f'||z[i+2]=='n'||z[i+2]=='t')
-               {
-                   continue;
-               }  
-           }
-           else if (z[i+1]=='t'||z[i+1]=='f'||z[i+1]=='a')
-           {
-               if (z[i+2]=='h'||z[i+2]=='o'||z[i+2]=='n')
-               {
-                  if (z[i+3]=='e'||z[i+3]=='r'||z[i+3]=='d')
-                  {
-                    continue;
-                  }
-               }  
-           } 
-           else if (z[i+1]=='w'&&z[i+2]=='i'&&z[i+3]=='t'&&z[i+4]=='h')
-           {
-            continue;   
-           }
-            else
-            {
-                printf("%s",z[i+1]);
-            }
-            
-       }
-    }
-    
-    
+    Acronym(z);
 }
 
+void Acronym(char *s)
+{
+    int i;
+    printf("%c", toupper(s[0]));
+    for (i = 0; i < strlen(s); i++)
+    {
+        if (s[i] == ' ')
+        {
+            i++;
+
+            if ((s[i] == '0' && s[i + 1] == 'f') || (s[i] == '0' && s[i + 1] == 'n') || (s[i] == 'a' && s[i + 1] == 't') || (s[i] == 'a' && s[i + 1] == 'n') || (s[i] == 'i' && s[i + 1] == 'n'))
+            {
+                i += 3;
+            }
+            else if ((s[i] == 'i' && s[i + 1] == ' ') || (s[i] == 'a' && s[i + 1] == ' '))
+            {
+                i += 2;
+            }
+            else if ((s[i] == 't' && s[i + 1] == 'h' && s[i + 2] == 'e') || (s[i] == 'f' && s[i + 1] == 'o' && s[i + 2] == 'r'))
+            {
+                i += 4;
+            }
+            else if (s[i] == 'w' && s[i + 1] == 'i' && s[i + 2] == 't' && s[i + 3] == 'h')
+                i += 5;
+        }
+        printf("%c", toupper(s[i]));
+    }
+}
