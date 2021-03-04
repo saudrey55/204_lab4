@@ -3,7 +3,7 @@
 
 void Acronym(char *s);
 
-int nmain()
+int main()
 {
     char z[1000];
 
