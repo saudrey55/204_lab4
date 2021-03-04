@@ -14,7 +14,7 @@ int main()
 void Acronym(char *s)
 {
     int i;
-    printf("%c", toupper(s[0]));
+    printf("%c", s[0]);
     for (i = 0; i < strlen(s); i++)
     {
         if (s[i] == ' ')
@@ -36,6 +36,6 @@ void Acronym(char *s)
             else if (s[i] == 'w' && s[i + 1] == 'i' && s[i + 2] == 't' && s[i + 3] == 'h')
                 i += 5;
         }
-        printf("%c", toupper(s[i]));
+        printf("%c", s[i]);
     }
 }
